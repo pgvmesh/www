@@ -13,8 +13,6 @@ interface Frontmatter {
   ogImage?: ImageMetadata;
   ogImageAlt?: string;
   canonical?: string;
-  eventDialog?: boolean;
-  pagefind?: boolean;
 }
 interface Props {
   frontmatter: Frontmatter;
@@ -27,8 +25,6 @@ const {
   ogImage,
   ogImageAlt,
   canonical,
-  eventDialog = true,
-  pagefind = true,
 } = frontmatter;
 
 const ogSource = ogImage ?? defaultOg;
@@ -75,8 +71,8 @@ const isPreview = branch !== undefined && branch !== 'main';
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
-    <SiteHeader eventDialog={eventDialog} />
-    <main {...(pagefind ? { 'data-pagefind-body': '' } : {})}>
+    <SiteHeader />
+    <main>
       <Nav />
       <slot />
       <SiteFooter />
