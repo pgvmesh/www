@@ -1,6 +1,6 @@
 ---
-title: LiFePO4 + Solar 1W Repeater – North Carolina Heat Edition
-description: A 1W MeshCore solar repeater built around LiFePO4 power, telemetry, and enclosure details for unattended PGV heat and humidity.
+title: LiFePO4 + Solar 1W Repeater – NC Heat Edition
+description: A 1W MeshCore solar repeater built around LiFePO4 power, telemetry, and enclosure details for unattended heat and humidity.
 thumbnail: ../../assets/lifepo4-solar-1w-repeater/texas-heat-repeater-internals.jpeg
 thumbnailAlt: Inside view of the LiFePO4 solar 1W MeshCore repeater enclosure
 author: Vladimir (@metanerd)
@@ -13,13 +13,13 @@ import sht45Sensor from '../../assets/lifepo4-solar-1w-repeater/sht45-sensor.jpe
 import antenna from '../../assets/lifepo4-solar-1w-repeater/fairview-8dbi-antenna.jpeg';
 import grafana from '../../assets/lifepo4-solar-1w-repeater/grafana-telemetry-dashboard.jpeg';
 
-# LiFePO4 + Solar 1W Repeater – North Carolina Heat Edition
+# LiFePO4 + Solar 1W Repeater – NC Heat Edition
 
 <Image src={internals} alt="Inside view of the outdoor LiFePO4 solar 1W MeshCore repeater enclosure with radio, charger, sensors, regulator, and supercapacitor rail" widths={[480, 768, 1024, 1600]} sizes="(min-width: 720px) 700px, 100vw" />
 
-This is an outdoor solar 1W MeshCore repeater built for hot, humid North Carolina weather. It uses a RAK 1W board, a LiFePO4 battery, an LFP-capable solar charger, a 5V regulator, a supercap-backed power rail, and sensors for power telemetry plus internal and external environmental conditions.
+This is an outdoor solar 1W MeshCore repeater built for hot, humid weather. It uses a RAK 1W board, a LiFePO4 battery, an LFP-capable solar charger, a 5V regulator, a supercap-backed power rail, and sensors for power telemetry plus internal and external environmental conditions.
 
-The goal is long unattended runtime in North Carolina heat and humidity, using LiFePO4 chemistry, temperature-protected charging, pressure equalization, drainage, and moisture control to keep the node reliable outdoors.
+The goal is long unattended runtime in extreme heat and humidity, using LiFePO4 chemistry, temperature-protected charging, pressure equalization, drainage, and moisture control to keep the node reliable outdoors.
 
 The external SHT45 temperature and humidity sensor sits in a sintered metal enclosure outside the box, while the BME680 monitors internal enclosure conditions.
 
@@ -27,7 +27,7 @@ The external SHT45 temperature and humidity sensor sits in a sintered metal encl
 
 The BLE antenna also makes service easier: we tested re-flashing at ~2.5 kbps from inside the house, even from a different floor, without opening the enclosure.
 
-<Image src={nodeWithLogo} alt="Outdoor 1W MeshCore repeater enclosure with PGV Mesh logo sticker" widths={[480, 768, 1024, 1600]} sizes="(min-width: 720px) 700px, 100vw" />
+<Image src={nodeWithLogo} alt="Outdoor 1W MeshCore repeater enclosure with logo sticker" widths={[480, 768, 1024, 1600]} sizes="(min-width: 720px) 700px, 100vw" />
 
 ## Telemetry
 
@@ -64,7 +64,7 @@ For a cleaner telemetry setup, the repeater can also be flashed with [this open 
 
 The Adafruit INA3221 variant needs compatible I2C address handling; compile firmware with `0x40/0x41` support for INA3221.
 
-<small>* affiliate link supporting PGV Mesh</small>
+<small>* affiliate link supporting local mesh development</small>
 
 <Image src={antenna} alt="Fairview FM51OM1016 8dbi antenna used with the outdoor repeater" widths={[480, 768, 1024, 1600]} sizes="(min-width: 720px) 700px, 100vw" />
 

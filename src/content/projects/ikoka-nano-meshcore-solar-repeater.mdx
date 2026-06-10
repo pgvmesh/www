@@ -15,7 +15,7 @@ import printedMount from '../../assets/ikoka-nano-filtered-repeater/ikoka-nano-3
 
 <video src="/videos/ikoka-nano-360.mp4" autoplay loop muted playsinline></video>
 
-This is the build PGV Mesh has installed on top of the University of North Carolina at PGV's Physics, Math, and Astronomy building as of September 2025.
+This build is designed for high-performance solar repeaters in RF-congested environments where extra filtering is required to maintain signal integrity.
 
 ## Parts List
 
@@ -34,11 +34,11 @@ This is the build PGV Mesh has installed on top of the University of North Carol
 - [Acasom 915 MHz cavity filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection)
 - [Ikoka Nano](https://github.com/ndoo/ikoka-nano-meshtastic-device)
 
-## Surrounded by 2200w of public service radio
+## Filtering for RF Noisy Environments
 
-The installation location is surrounded by 2.2kw of RF radiation from the [PGV GATRRS radio system](https://www.austintexas.gov/council/greater-austin-travis-county-regional-radio-system-governing-board). This means we need extra filtering to avoid overload on the low power LoRa radio that we're using to run MeshCore.
+In many urban or shared infrastructure locations, nodes may be surrounded by significant RF radiation from commercial or public service radio systems. This means extra filtering is often needed to avoid overloading the low-power LoRa radio.
 
-We're currently using the [Acasom Cavity Filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection) to accomplish this task. It has been performing successfully for 9 months as of the writing of this post. Historically, we've also used the Airframes filter with success. The Airframes has a much small bandpass, and so requires tuning when switching from Meshtastic(908mhz) to MeshCore(910mhz). As a result, when PGV Mesh switched to MeshCore, we simply swapped the existing box for a new prebuilt box and what we had available was the Acasom.
+We're currently using the [Acasom Cavity Filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection) to accomplish this task. It has been performing successfully in high-interference environments. Historically, we've also used the Airframes filter with success. The Airframes has a much smaller bandpass, and so requires tuning when switching from Meshtastic(908mhz) to MeshCore(910mhz). As a result, when upgrading to MeshCore, using the Acasom filter is often a simpler path if you don't want to perform manual tuning.
 
 While tuning the Airframes isn't trivial, it also isn't particularly difficult. You can [read our guide for tuning the Airframes cavity filter here](/projects/tuning-cavity-filter/).
 
@@ -54,7 +54,7 @@ To maintain as much power as possible, and to reduce any entry for external RF, 
 
 ## Power Source
 
-As you may have seen from our now commonly referenced [Solar Parts List](/devices/#solar) we stick to Voltaic Systems batteries. On this install, we're using the [V25](https://voltaicsystems.com/v25/), mated to the [10w Voltaic Systems solar panel](https://amzn.to/4deFKqj). The primary downside of this approach is that you won't be able to see your battery level remotely. However, based on math you'd be able to run for more than a week with ZERO solar. In PGV, that's just not a reality.
+As you may have seen from our now commonly referenced [Solar Parts List](/devices/#solar) we stick to Voltaic Systems batteries. On this install, we're using the [V25](https://voltaicsystems.com/v25/), mated to the [10w Voltaic Systems solar panel](https://amzn.to/4deFKqj). The primary downside of this approach is that you won't be able to see your battery level remotely. However, based on math you'd be able to run for more than a week with ZERO solar. In most sunny environments, that provides a massive safety margin.
 
 ## Testing
 
