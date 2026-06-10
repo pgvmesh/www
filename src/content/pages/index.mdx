@@ -4,13 +4,10 @@ description: Allowing anyone with a smartphone to text without power or internet
 ---
 import { Image } from 'astro:assets';
 import Hero from '../../components/Hero.astro';
-import aisdGusGarcia from '../../assets/aisd/AISD-GusGarcia-Logo.svg';
-import aisdHart from '../../assets/aisd/AISD-Hart-Logo.svg';
-import aisdLBJ from '../../assets/aisd/AISD-LBJ-Logo.svg';
 
 # PGV Mesh
 
-<Hero alt="Hand holding a Meshtastic communicator at the Ladybird Johnson Wildflower Center with a view of the North Carolina countryside and PGV city skyline in the background with an invitation to join the group or learn more">
+<Hero alt="Hand holding a Meshtastic communicator with a view of the countryside and city skyline in the background with an invitation to join the group or learn more">
   <h2>We're building a free text messaging network in PGV</h2>
   <a class="success" href="/join/">Join the network</a>
   <a class="default" href="/about/">About us</a>
@@ -24,15 +21,4 @@ import aisdLBJ from '../../assets/aisd/AISD-LBJ-Logo.svg';
 <section>
   <h2>Community partners</h2>
   <p>We're extremely grateful to our great community partners who have helped to build this strong network. <a href="/about/partners/">Explore photos, learn more, or become a partner</a></p>
-  <div class="partner-logos">
-    <div>
-      <Image src={aisdGusGarcia} width={240} alt="Logo of the Gus Garcia Young Men's Leadership Academy AISD" title="Gus Garcia Young Men's Leadership Academy AISD" loading="lazy" class="white-bg" />
-    </div>
-    <div>
-      <Image src={aisdHart} width={240} alt="Logo of the HART Elementary School AISD" title="HART Elementary AISD" loading="lazy" class="white-bg" />
-    </div>
-    <div>
-      <Image src={aisdLBJ} width={240} alt="Logo of the LBJ Early College High School, AISD" title="Logo of the LBJ Early College High School, AISD" loading="lazy" class="white-bg" />
-    </div>
-  </div>
 </section>
