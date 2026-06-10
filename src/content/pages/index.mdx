@@ -1,24 +1,61 @@
 ---
-title: PGV Mesh
-description: Allowing anyone with a smartphone to text without power or internet by building a solar-powered mesh radio network in PGV.
+title: PGV Mesh | MeshCore settings & community Discord
+description: Official recommended settings and discord community information for PGV Mesh, powered by MeshCore.
 ---
-import { Image } from 'astro:assets';
 import Hero from '../../components/Hero.astro';
 
 # PGV Mesh
 
-<Hero alt="Hand holding a Meshtastic communicator with a view of the countryside and city skyline in the background with an invitation to join the group or learn more">
-  <h2>We're building a free text messaging network in PGV</h2>
-  <a class="success" href="/join/">Join the network</a>
-  <a class="default" href="/about/">About us</a>
+<Hero alt="Invite to join PGV Mesh Discord server">
+  <h2>We're building an off-grid text messaging network in PGV</h2>
+  <a class="success" href="https://discord.gg/AUjz5RGGVu" target="_blank" rel="noopener">Join our Discord</a>
 </Hero>
 
-<section>
-  <h2>Dive in</h2>
-  <p>We have all sorts of great content on our website. From our world famous <a href="/about/#eli5">Mesh Networking ELI5</a> to a great list of tips for <a href="/similar-networks/#start-a-similar-network">starting your own mesh network</a> we have aimed to share everything we learn as we grow PGV Mesh. Take a look through the navigation at the top of our site and <a href="mailto:info@pgvmesh.org">drop us an email</a> if you appreciate what we've done or have any questions or ideas. We'd love to hear from you!</p>
-</section>
+## What is PGV Mesh?
 
-<section>
-  <h2>Community partners</h2>
-  <p>We're extremely grateful to our great community partners who have helped to build this strong network. <a href="/about/partners/">Explore photos, learn more, or become a partner</a></p>
-</section>
+PGV Mesh is a volunteer-run community network using MeshCore for grid-independent text communication.
+
+## Getting Started with MeshCore
+
+1. **Hardware**: Get compatible hardware (e.g. Heltec V3, T-Echo, etc.).
+2. **Flash**: Flash your device via [flasher.meshcore.io](https://flasher.meshcore.io).
+   - **Companion**: Flashing for companions (connecting to phone/computer).
+   - **Repeater**: Flashing for standalone repeaters/routers.
+3. **Pair**: Connect your device via Bluetooth or Wi-Fi to pair with the app.
+
+## Recommended settings (Tuned for Pockets of Nodes)
+
+| Setting | Value |
+| --- | --- |
+| Preset | USA/Canada (Recommended) |
+| Frequency | 910.525 MHz |
+| Bandwidth | 62.5 kHz |
+| Spread Factor | 7 |
+| Coding Rate | 8 (for Max Sensitivity) |
+| Path Hash | 2-Byte (Experimental Settings for companions, `set path.hash.mode 1` for repeaters) |
+| Zero Hop Advert | 60 minutes |
+| Flood Advert | 3 hours |
+
+## Repeater Advanced Tuning (Admin commands)
+
+### Transmission Delays
+
+- **0–1 Neighbors (Sparse/Pockets)**:
+  - `set txdelay 0.3`
+  - `set direct.txdelay 0.1`
+- **2–4 Neighbors**:
+  - `set txdelay 0.5`
+  - `set direct.txdelay 0.3`
+- **5–9 Neighbors**:
+  - `set txdelay 1.0`
+  - `set direct.txdelay 0.5`
+- **10–14 Neighbors (Dense)**:
+  - `set txdelay 1.5`
+  - `set direct.txdelay 1.0`
+
+### Stability Commands
+
+```
+set agc.reset.interval 4
+set multi.acks 1
+```
