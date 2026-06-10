@@ -6,16 +6,22 @@ import Hero from '../../components/Hero.astro';
 
 # PGV Mesh
 
-<Hero alt="Invite to join PGV Mesh Discord server">
+<Hero alt="DIY solar-powered radio node strapped to a tall pine tree in a flat North Carolina marshy landscape">
   <h2>We're building an off-grid text messaging network in PGV</h2>
   <a class="success" href="https://discord.gg/AUjz5RGGVu" target="_blank" rel="noopener">Join our Discord</a>
+  <a class="default" href="#getting-started">Join the Mesh</a>
 </Hero>
 
 ## What is PGV Mesh?
 
 PGV Mesh is a volunteer-run community network using MeshCore for grid-independent text communication.
 
-## Getting Started with MeshCore
+<section id="map">
+  <h2>Live Coverage Map</h2>
+  <p>We log and map our signals and coverage dynamically. You can view our active network nodes, signals, and area maps on the <a href="https://pgv.meshmapper.net" target="_blank" rel="noopener">PGV MeshMapper Map</a>.</p>
+</section>
+
+<h2 id="getting-started">Getting Started with MeshCore</h2>
 
 1. **Hardware**: Get compatible hardware (e.g. Heltec V3, T-Echo, etc.).
 2. **Flash**: Flash your device via [flasher.meshcore.io](https://flasher.meshcore.io).
@@ -32,7 +38,7 @@ PGV Mesh is a volunteer-run community network using MeshCore for grid-independen
 | Bandwidth | 62.5 kHz |
 | Spread Factor | 7 |
 | Coding Rate | 8 (for Max Sensitivity) |
-| Path Hash | 2-Byte (Experimental Settings for companions, `set path.hash.mode 1` for repeaters) |
+| Path Hash | 2-Byte (Recommended for both companions and repeaters, `set path.hash.mode 1` on repeaters) |
 | Zero Hop Advert | 60 minutes |
 | Flood Advert | 3 hours |
 

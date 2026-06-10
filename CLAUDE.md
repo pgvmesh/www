@@ -19,7 +19,7 @@ Constraint: **no client-side framework runtime**.
 
 - **Pages live in `src/content/pages/`** as `.mdx` files. Frontmatter is validated against the schema in `src/content/config.ts` (`title`, `description` required; `ogImage`, `ogImageAlt`, `canonical`, `publishedAt` optional).
 - **Routing is a single catch-all** at `src/pages/[...slug].astro` that renders entries in the pages collection through `BaseLayout`. `index.mdx` is the only active page in the `pages` collection.
-- **BaseLayout owns the `<head>`**: title, description, canonical, full OG/Twitter set, favicons, manifest, sitemap link. The default `og:image` is `src/assets/hero/pgv-mesh-wildflower-center-large.webp`, processed through `getImage()` to produce an absolute URL.
+- **BaseLayout owns the `<head>`**: title, description, canonical, full OG/Twitter set, favicons, manifest, sitemap link. The default `og:image` is `src/assets/hero/pgv-mesh-pine-node.png`, processed through `getImage()` to produce an absolute URL.
 - **Deploy:** Production lives on Cloudflare Workers Static Assets. `wrangler.jsonc` declares the project name as `pgvmesh`. Workers Builds runs on every push to the repo.
 
 ## Gotchas
