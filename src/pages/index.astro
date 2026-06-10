@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const title = "PGV Mesh | MeshCore settings & community Discord";
+const description = "Official recommended settings and discord community information for PGV Mesh, powered by MeshCore.";
+---
+
+<BaseLayout title={title} description={description}>
+  <h1>PGV Mesh</h1>
+
+  <Hero alt="DIY solar-powered radio node strapped to a tall pine tree in a flat North Carolina marshy landscape">
+    <h2>We're building an off-grid text messaging network in PGV</h2>
+    <a class="success" href="https://discord.gg/AUjz5RGGVu" target="_blank" rel="noopener">Join our Discord</a>
+    <a class="default" href="#getting-started">Join the Mesh</a>
+  </Hero>
+
+  <h2>What is PGV Mesh?</h2>
+  <p>PGV Mesh is a volunteer-run community network using MeshCore for grid-independent text communication.</p>
+
+  <section id="map">
+    <h2>Live Coverage Map</h2>
+    <p>We log and map our signals and coverage dynamically. You can view our active network nodes, signals, and area maps on the <a href="https://pgv.meshmapper.net" target="_blank" rel="noopener">PGV MeshMapper Map</a>.</p>
+  </section>
+
+  <h2 id="getting-started">Getting Started with MeshCore</h2>
+  <ol>
+    <li><strong>Hardware</strong>: Get compatible hardware (e.g. Heltec V3, T-Echo, etc.).</li>
+    <li><strong>Flash</strong>: Flash your device via <a href="https://flasher.meshcore.io">flasher.meshcore.io</a>.
+      <ul>
+        <li><strong>Companion</strong>: Flashing for companions (connecting to phone/computer).</li>
+        <li><strong>Repeater</strong>: Flashing for standalone repeaters/routers.</li>
+      </ul>
+    </li>
+    <li><strong>Pair</strong>: Connect your device via Bluetooth or Wi-Fi to pair with the app.</li>
+  </ol>
+
+  <h2>Recommended settings (Tuned for Pockets of Nodes)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Preset</td>
+        <td>USA/Canada (Recommended)</td>
+      </tr>
+      <tr>
+        <td>Frequency</td>
+        <td>910.525 MHz</td>
+      </tr>
+      <tr>
+        <td>Bandwidth</td>
+        <td>62.5 kHz</td>
+      </tr>
+      <tr>
+        <td>Spread Factor</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Coding Rate</td>
+        <td>8 (for Max Sensitivity)</td>
+      </tr>
+      <tr>
+        <td>Path Hash</td>
+        <td>2-Byte (Recommended for both companions and repeaters, <code>set path.hash.mode 1</code> on repeaters)</td>
+      </tr>
+      <tr>
+        <td>Zero Hop Advert</td>
+        <td>60 minutes</td>
+      </tr>
+      <tr>
+        <td>Flood Advert</td>
+        <td>3 hours</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Repeater Advanced Tuning (Admin commands)</h2>
+
+  <h3>Transmission Delays</h3>
+  <ul>
+    <li>
+      <strong>0–1 Neighbors (Sparse/Pockets)</strong>:
+      <ul>
+        <li><code>set txdelay 0.3</code></li>
+        <li><code>set direct.txdelay 0.1</code></li>
+      </ul>
+    </li>
+    <li>
+      <strong>2–4 Neighbors</strong>:
+      <ul>
+        <li><code>set txdelay 0.5</code></li>
+        <li><code>set direct.txdelay 0.3</code></li>
+      </ul>
+    </li>
+    <li>
+      <strong>5–9 Neighbors</strong>:
+      <ul>
+        <li><code>set txdelay 1.0</code></li>
+        <li><code>set direct.txdelay 0.5</code></li>
+      </ul>
+    </li>
+    <li>
+      <strong>10–14 Neighbors (Dense)</strong>:
+      <ul>
+        <li><code>set txdelay 1.5</code></li>
+        <li><code>set direct.txdelay 1.0</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Stability Commands</h3>
+  <pre><code class="language-sh">set agc.reset.interval 4
+set multi.acks 1
+</code></pre>
+</BaseLayout>
