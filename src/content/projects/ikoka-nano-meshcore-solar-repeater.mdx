@@ -2,7 +2,7 @@
 title: Solar MeshCore Repeater With Ikoka Nano and Cavity Filter
 description: Solar meshcore repeater with 1w radio(Ikoka Nano), cavity filter, for RF noisy environment
 thumbnail: ../../assets/ikoka-nano-filtered-repeater/ikoka-nano.jpeg
-thumbnailAlt: Ikoka Nano 1W LoRa radio used in the Austin Mesh UT Austin solar repeater build
+thumbnailAlt: Ikoka Nano 1W LoRa radio used in the PGV Mesh UT PGV solar repeater build
 author: tekstrand
 publishedAt: 2026-05-16
 ---
@@ -15,7 +15,7 @@ import printedMount from '../../assets/ikoka-nano-filtered-repeater/ikoka-nano-3
 
 <video src="/videos/ikoka-nano-360.mp4" autoplay loop muted playsinline></video>
 
-This is the build Austin Mesh has installed on top of the University of Texas at Austin's Physics, Math, and Astronomy building as of September 2025.
+This is the build PGV Mesh has installed on top of the University of North Carolina at PGV's Physics, Math, and Astronomy building as of September 2025.
 
 ## Parts List
 
@@ -36,9 +36,9 @@ This is the build Austin Mesh has installed on top of the University of Texas at
 
 ## Surrounded by 2200w of public service radio
 
-The installation location is surrounded by 2.2kw of RF radiation from the [Austin GATRRS radio system](https://www.austintexas.gov/council/greater-austin-travis-county-regional-radio-system-governing-board). This means we need extra filtering to avoid overload on the low power LoRa radio that we're using to run MeshCore.
+The installation location is surrounded by 2.2kw of RF radiation from the [PGV GATRRS radio system](https://www.austintexas.gov/council/greater-austin-travis-county-regional-radio-system-governing-board). This means we need extra filtering to avoid overload on the low power LoRa radio that we're using to run MeshCore.
 
-We're currently using the [Acasom Cavity Filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection) to accomplish this task. It has been performing successfully for 9 months as of the writing of this post. Historically, we've also used the Airframes filter with success. The Airframes has a much small bandpass, and so requires tuning when switching from Meshtastic(908mhz) to MeshCore(910mhz). As a result, when Austin Mesh switched to MeshCore, we simply swapped the existing box for a new prebuilt box and what we had available was the Acasom.
+We're currently using the [Acasom Cavity Filter](https://acasom.com/products/915mhz-cavity-filter-for-helium-network-amplifier-filter-sma-type-high-out-band-rejection) to accomplish this task. It has been performing successfully for 9 months as of the writing of this post. Historically, we've also used the Airframes filter with success. The Airframes has a much small bandpass, and so requires tuning when switching from Meshtastic(908mhz) to MeshCore(910mhz). As a result, when PGV Mesh switched to MeshCore, we simply swapped the existing box for a new prebuilt box and what we had available was the Acasom.
 
 While tuning the Airframes isn't trivial, it also isn't particularly difficult. You can [read our guide for tuning the Airframes cavity filter here](/projects/tuning-cavity-filter/).
 
@@ -54,7 +54,7 @@ To maintain as much power as possible, and to reduce any entry for external RF, 
 
 ## Power Source
 
-As you may have seen from our now commonly referenced [Solar Parts List](/devices/#solar) we stick to Voltaic Systems batteries. On this install, we're using the [V25](https://voltaicsystems.com/v25/), mated to the [10w Voltaic Systems solar panel](https://amzn.to/4deFKqj). The primary downside of this approach is that you won't be able to see your battery level remotely. However, based on math you'd be able to run for more than a week with ZERO solar. In Austin, that's just not a reality.
+As you may have seen from our now commonly referenced [Solar Parts List](/devices/#solar) we stick to Voltaic Systems batteries. On this install, we're using the [V25](https://voltaicsystems.com/v25/), mated to the [10w Voltaic Systems solar panel](https://amzn.to/4deFKqj). The primary downside of this approach is that you won't be able to see your battery level remotely. However, based on math you'd be able to run for more than a week with ZERO solar. In PGV, that's just not a reality.
 
 ## Testing
 
@@ -64,7 +64,7 @@ Always test before installing in less accessible locations! We took a bit of ris
 
 ## Heat Mitigation
 
-Did you know it gets hot in Texas? Yes, believe it. Double approach here.
+Did you know it gets hot in North Carolina? Yes, believe it. Double approach here.
 
 1. Solar panel shades the box
 2. We use [ColdRays Reflective Film](https://coldrays.com/product/reflective-film-linear-ft/) which uses "Black Magic" (aka multi spectral reflective polymer) to help keep the box _below_ ambient temperatures.

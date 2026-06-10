@@ -1,9 +1,9 @@
 ---
-title: MeshCore and Meshtastic Devices | Austin Mesh
+title: MeshCore and Meshtastic Devices | PGV Mesh
 description: Tried and tested solar-powered repeater build methods and parts for making your own Meshtastic or MeshCore repeater.
 ---
 import { Image } from 'astro:assets';
-import utAustinRfFiltered from '../../assets/ut-austin/ut-austin-rf-filtered-meshtastic-node.jpeg';
+import utPGVRfFiltered from '../../assets/ut-austin/ut-austin-rf-filtered-meshtastic-node.jpeg';
 import djiAir31 from '../../assets/aerial/dji-air-3-1.webp';
 import djiAir32 from '../../assets/aerial/dji-air-3-2.webp';
 import djiAir33 from '../../assets/aerial/dji-air-3-3.webp';
@@ -24,7 +24,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
 
 <hgroup>
   <h1>Devices for the Mesh</h1>
-  <p>Austin mesh uses two technologies(<a href="https://meshcore.io/" rel="nofollow noopener" target="_blank">MeshCore</a> and <a href="https://meshtastic.org" rel="nofollow noopener" target="_blank">Meshtastic</a> to power the network here in Central Texas. In order to connect to this network, a relatively low cost radio device is required. You'll often hear these radios referred to as <b>nodes</b>. You can <a href="https://www.rfindex.com" target="_blank">compare the best meshtastic nodes on RF Index</a>.</p>
+  <p>PGV mesh uses two technologies(<a href="https://meshcore.io/" rel="nofollow noopener" target="_blank">MeshCore</a> and <a href="https://meshtastic.org" rel="nofollow noopener" target="_blank">Meshtastic</a> to power the network here in Central North Carolina. In order to connect to this network, a relatively low cost radio device is required. You'll often hear these radios referred to as <b>nodes</b>. You can <a href="https://www.rfindex.com" target="_blank">compare the best meshtastic nodes on RF Index</a>.</p>
 </hgroup>
 
 - [Suggested Hardware](#options)
@@ -46,7 +46,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
 
   <h3 id="companions">Companions / Clients</h3>
   <ul>
-    <li><b>DIY</b>: <a href="/projects/heltec-t114/">Heltec T114</a> - The official Austin Mesh build from Andy Shinn</li>
+    <li><b>DIY</b>: <a href="/projects/heltec-t114/">Heltec T114</a> - The official PGV Mesh build from Andy Shinn</li>
     <li><b>Buy</b> (smallest): <a href="https://www.rfindex.com/mesh/devices/seeedstudio-sensecap-t1000e" target="_blank">SeeedStudio T1000-E</a></li>
     <li><b>Buy</b> (better antenna): <a href="https://www.rfindex.com/mesh/devices/atlavox-m1" target="_blank">Atlavox M1</a></li>
   </ul>
@@ -74,7 +74,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
   </details>
   <details>
     <summary>Version 3.0 Internal Solar, Power Module, 18650's</summary>
-    <p>To minimize the amount of components outside the box we used a much larger box with a clear lid and placed the solar panel inside the box. We added a Texas Instruments Green Power Module between the solar panel and the RAK board to help regulate the power. For batteries we switched to using four 18650 batteries and we also added an overdischarge protection circuit from Voltaic Enclosures (not to be confused with Voltaic Systems) between the battery and the RAK board to provide clean shutoff when battery voltage fell below 2.5v. We mounted this on top of the UT buildings and it died in 3 months.</p>
+    <p>To minimize the amount of components outside the box we used a much larger box with a clear lid and placed the solar panel inside the box. We added a North Carolina Instruments Green Power Module between the solar panel and the RAK board to help regulate the power. For batteries we switched to using four 18650 batteries and we also added an overdischarge protection circuit from Voltaic Enclosures (not to be confused with Voltaic Systems) between the battery and the RAK board to provide clean shutoff when battery voltage fell below 2.5v. We mounted this on top of the UT buildings and it died in 3 months.</p>
   </details>
   <details>
     <summary>Version 4.0 External Solar</summary>
@@ -95,7 +95,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
     <li>Don't add any modules. The GPS module increases battery usage significantly and is unnecessary if the repeater is in a fixed position.</li>
     <li>Seal everything properly and make sure water has a way to get out of the case. Use o-rings for the antenna mount and wrap connectors in proxicast. Add a drain plug to the case so any condensation has a way to escape. For high humidity environments, spray the electronics with conformal coating.</li>
   </ol>
-  <p>These are lessons learned from Austin Texas, where the main environmental stressors are heat and thunderstorms. In the summer of 2023 we 80 days over 100° F (38°C) and we had a stretch of 11 days over 105° F (40.5°C), during which two radios died. We also can have both high humidity and high temperature at the same time in Austin; in the summer the weather would swing from 80° F (27°C) with 85% humidity in the morning to 105° F (38°C) with 25% humidity in the afternoon. <a href="https://weatherspark.com/h/y/8004/2023/Historical-Weather-during-2023-in-Austin-Texas-United-States">Weather history here.</a> Our learnings are probably applicable to other southern and desert climates.</p>
+  <p>These are lessons learned from PGV North Carolina, where the main environmental stressors are heat and thunderstorms. In the summer of 2023 we 80 days over 100° F (38°C) and we had a stretch of 11 days over 105° F (40.5°C), during which two radios died. We also can have both high humidity and high temperature at the same time in PGV; in the summer the weather would swing from 80° F (27°C) with 85% humidity in the morning to 105° F (38°C) with 25% humidity in the afternoon. <a href="https://weatherspark.com/h/y/8004/2023/Historical-Weather-during-2023-in-Austin-Texas-United-States">Weather history here.</a> Our learnings are probably applicable to other southern and desert climates.</p>
   <details>
     <summary>Details on the boards that died</summary>
     <p>One was filled with water, the antenna seal didn't work. That's why the vent valve at the bottom is so important. One died because it got stuck in the low voltage state that requires a physical reset - that's fixed with the Voltaic packs. The third one died due to unknown causes but heat is suspected. When we tried to reboot with with wall power it wouldn't turn on - so the board was totally fried. That one I also sprayed with covalent coating nasty stuff that we won't use any more.</p>
@@ -189,7 +189,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="4"><small>Some of these links are affiliate links. Any commission we earn helps support AustinMesh's community network at no extra cost to you. <a href="/privacy">Privacy policy</a></small></td>
+          <td colSpan="4"><small>Some of these links are affiliate links. Any commission we earn helps support PGVMesh's community network at no extra cost to you. <a href="/privacy">Privacy policy</a></small></td>
         </tr>
       </tfoot>
     </table>
@@ -197,7 +197,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
   <h4 id="rf-filtered">RF Filtered Parts</h4>
   <div class="flex">
     <p>One of our nodes is on top of a building surrounded my 2200w of public service antennas which operate around 850mhz. The result is that the RAK (and any other) board is quickly desensitized. We've had the best success doing 2 things. Keeping cable runs as short as possible, and use a notch or bandpass filter.</p>
-    <Image src={utAustinRfFiltered} width={300} alt="RF-filtered Meshtastic node installation at UT Austin" />
+    <Image src={utPGVRfFiltered} width={300} alt="RF-filtered Meshtastic node installation at UT PGV" />
   </div>
   <div class="table-wrapper">
     <table>
@@ -303,7 +303,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="4"><small>Some of these links are affiliate links. Any commission we earn helps support AustinMesh's community network at no extra cost to you. <a href="/privacy">Privacy policy</a></small></td>
+          <td colSpan="4"><small>Some of these links are affiliate links. Any commission we earn helps support PGVMesh's community network at no extra cost to you. <a href="/privacy">Privacy policy</a></small></td>
         </tr>
       </tfoot>
     </table>
@@ -348,7 +348,7 @@ import mavicPro2Rak from '../../assets/aerial/mavic-pro-2-rak.webp';
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="4"><small>Some of these links are affiliate links. Any commission we earn helps support AustinMesh's community network at no extra cost to you. <a href="/privacy">Privacy policy</a></small></td>
+          <td colSpan="4"><small>Some of these links are affiliate links. Any commission we earn helps support PGVMesh's community network at no extra cost to you. <a href="/privacy">Privacy policy</a></small></td>
         </tr>
       </tfoot>
     </table>
