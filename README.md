@@ -27,7 +27,7 @@ npm run dev        # http://localhost:4321
 
 Other scripts:
 
-- `npm run build` — production build (runs Pagefind over `dist/` as a postbuild step)
+- `npm run build` — production build
 - `npm run preview` — serve the built site locally
 
 ## Contributing

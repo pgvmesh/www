@@ -88,15 +88,6 @@ a:hover { text-decoration: underline; }
 
 .site-nav a:hover { color: var(--text); text-decoration: none; }
 
-.inline-code {
-  background: #1c2128;
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-  font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: 0.88em;
-  color: var(--accent);
-}
-
 main {
   max-width: 900px;
   margin: 0 auto;
