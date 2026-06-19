@@ -162,8 +162,23 @@ const CONTACT_EMAIL  = 'info@pgvmesh.org';
         </table>
       </div>
 
+      <div class="settings-block">
+        <div class="settings-block-title">Room Server — a repeater that also hosts a shared room</div>
+        <table>
+          <tbody>
+            <tr><td>Radio &amp; routing</td><td>Identical to a Repeater — same preset, coding rate, path hash, advert intervals, and console commands above. A room server <em>is</em> a routing node.</td></tr>
+            <tr><td>Node Name</td><td><code>pgvmesh.org &lt;area&gt;</code> — same convention as a repeater</td></tr>
+            <tr><td>Room commands</td><td><code>password &lt;admin&gt;</code> &middot; <code>set guest.password &lt;room-pw&gt;</code> &middot; <code>set repeat on</code> &middot; <code>set allow.read.only on</code> <span style="color:var(--muted)">(optional — read-only room)</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">
         Repeaters advert frequently because our network is young — it helps everyone find each other. Planning a repeater? Check with us first on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a> or at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> so we can coordinate placement.
+      </p>
+
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">
+        <strong style="color:var(--text)">Multiple roles, one name.</strong> A node has a single name no matter how many roles it runs. A box that's a repeater, room server, <em>and</em> observer all at once is still just <code>pgvmesh.org &lt;area&gt;</code> — don't try to encode each role in the name. Role is set by firmware/config, not by the node name.
       </p>
     </section>
 
@@ -214,7 +229,7 @@ const CONTACT_EMAIL  = 'info@pgvmesh.org';
         Become an Observer
       </h2>
       <p style="color:var(--muted); font-size:.92rem; margin-bottom:1rem;">
-        Observers feed live mesh telemetry to <a href={MESHMAPPER_URL} target="_blank" rel="noopener">our region map</a> so everyone can see network health and coverage. Flash a spare device from the <a href="https://flasher.meshcore.io/" target="_blank" rel="noopener">Web Flasher</a>, then follow the <a href="https://wiki.meshmapper.net/mqtt-setup/" target="_blank" rel="noopener">MeshMapper observer guide</a>. Stuck? Ask on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a>.
+        An observer is the &ldquo;ears&rdquo; of <a href={MESHMAPPER_URL} target="_blank" rel="noopener">our region map</a> — it listens to mesh traffic and publishes it to an MQTT broker so everyone can see network health and coverage. <strong style="color:var(--text)">Observer is a function, not a firmware role</strong>: any node type can run it (we run ours on a room server), and it keeps that node's existing name. It uses the same radio settings as every other node — the observer part is just the MQTT link. Flash a device from the <a href="https://flasher.meshcore.io/" target="_blank" rel="noopener">Web Flasher</a>, then follow the <a href="https://wiki.meshmapper.net/mqtt-main/" target="_blank" rel="noopener">MeshMapper observer guide</a>. Stuck? Ask on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a>.
       </p>
     </section>
 
