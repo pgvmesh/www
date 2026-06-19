@@ -173,17 +173,17 @@ const CONTACT_EMAIL  = 'info@pgvmesh.org';
             <tr><td>Zero-Hop Advert</td><td><code>every 60 min</code></td></tr>
             <tr><td>Flood Advert</td><td><code>every 3 hours</code> — so members can discover the room</td></tr>
             <tr><td>Room commands</td><td><code>password &lt;admin&gt;</code> &middot; <code>set guest.password &lt;room-pw&gt;</code> &middot; <code>set allow.read.only on</code> <span style="color:var(--muted)">(optional)</span></td></tr>
-            <tr><td>Not a repeater</td><td>Leave <code>repeat</code> <strong>off</strong> (the default). MeshCore advises against enabling repeat on a room server — it lacks the full repeater and remote-admin feature set, so it doesn't need the repeater relay tuning. If an area needs both, run the repeater on a separate device.</td></tr>
+            <tr><td>Not a repeater</td><td>Leave <code>repeat</code> <strong>off</strong> — <a href="https://docs.meshcore.io/" target="_blank" rel="noopener">MeshCore</a> recommends a separate repeater device. No relay tuning needed.</td></tr>
           </tbody>
         </table>
       </div>
 
       <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">
-        Repeaters advert frequently because our network is young — it helps everyone find each other. Planning a repeater? Check with us first on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a> or at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> so we can coordinate placement.
+        Based on <a href="https://tennmesh.com/settings/" target="_blank" rel="noopener">TennMesh's reference settings</a>, with coding rate 8 and frequent adverts tuned for our sparse coverage. Planning a repeater? Coordinate first on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a> or at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
       </p>
 
       <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">
-        <strong style="color:var(--text)">Naming: skip the role tag.</strong> Keep names as <code>pgvmesh.org &lt;area&gt;</code> and don't bake the role in. The MeshCore app already shows each node's type (companion / repeater / room server) with its own icon, so a <code>-RPT</code>-style suffix is redundant — and it goes stale the moment a node is repurposed or gains a second role, since renaming forces a fresh advert and updates everyone's contact list. A room server that also feeds the map as an <a href="#observer">observer</a> is still one node, one name. Add a short qualifier only to break a tie when one area runs two PGV devices — e.g. <code>pgvmesh.org Grimesland</code> (repeater) and <code>pgvmesh.org Grimesland Room</code> (room server).
+        <strong style="color:var(--text)">Naming.</strong> Keep it <code>pgvmesh.org &lt;area&gt;</code> for every role — the app already shows each node's type by icon, so there's no need to put it in the name. Only add a qualifier to break a tie when one area runs two devices, e.g. <code>pgvmesh.org Grimesland Room</code>.
       </p>
     </section>
 
@@ -234,7 +234,7 @@ const CONTACT_EMAIL  = 'info@pgvmesh.org';
         Become an Observer
       </h2>
       <p style="color:var(--muted); font-size:.92rem; margin-bottom:1rem;">
-        An observer is the &ldquo;ears&rdquo; of <a href={MESHMAPPER_URL} target="_blank" rel="noopener">our region map</a> — it listens to mesh traffic and publishes it to an MQTT broker so everyone can see network health and coverage. <strong style="color:var(--text)">Observer is a function, not a firmware role</strong>: any node type can run it (we run ours on a room server), and it keeps that node's existing name. It uses the same radio settings as every other node — the observer part is just the MQTT link. Flash a device from the <a href="https://flasher.meshcore.io/" target="_blank" rel="noopener">Web Flasher</a>, then follow the <a href="https://wiki.meshmapper.net/mqtt-main/" target="_blank" rel="noopener">MeshMapper observer guide</a>. Stuck? Ask on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a>.
+        An observer feeds live mesh traffic to <a href={MESHMAPPER_URL} target="_blank" rel="noopener">our region map</a> over MQTT. It's a function, not a firmware role — any node can run it (ours is on a room server), with the same radio settings as everything else. Follow the <a href="https://wiki.meshmapper.net/mqtt-main/" target="_blank" rel="noopener">MeshMapper observer guide</a>, or ask on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a>.
       </p>
     </section>
 
