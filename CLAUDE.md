@@ -18,7 +18,7 @@ Static one-page site for PGV Mesh, a community MeshCore LoRa mesh network. Live 
 
 Defined in the frontmatter of `index.astro`:
 
-- Discord: https://discord.com/invite/AUjz5RGGVu
+- Discord: https://discord.com/invite/KKeh7eERZD
 - MeshMapper region: https://pgv.meshmapper.net/
 - Contact: info@pgvmesh.org
 
