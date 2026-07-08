@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- outer ring (bottom hidden behind the banner) -->
+  <circle cx="256" cy="236" r="200" stroke="#3fb950" stroke-width="28"/>
+  <!-- triangle edges -->
+  <g stroke="#3fb950" stroke-width="12" stroke-linecap="round">
+    <line x1="256" y1="108" x2="126" y2="316"/>
+    <line x1="256" y1="108" x2="386" y2="316"/>
+    <line x1="126" y1="316" x2="386" y2="316"/>
+  </g>
+  <!-- nodes -->
+  <circle cx="256" cy="108" r="30" fill="#3fb950"/>
+  <circle cx="126" cy="316" r="30" fill="#3fb950"/>
+  <circle cx="386" cy="316" r="30" fill="#3fb950"/>
+  <!-- banner -->
+  <rect x="64" y="366" width="384" height="72" rx="16" fill="#3fb950"/>
+  <text x="256" y="418" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="52" letter-spacing="3" fill="#fff">PGV MESH</text>
+  <!-- swash under the banner -->
+  <path d="M92 454 Q256 492 420 454" stroke="#3fb950" stroke-width="10" stroke-linecap="round"/>
+</svg>
