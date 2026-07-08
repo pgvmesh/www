@@ -4,6 +4,7 @@ import '../styles/global.css';
 const DISCORD_URL    = 'https://discord.gg/9k59CD6mC6';
 const MESHMAPPER_URL = 'https://pgv.meshmapper.net/';
 const CONTACT_EMAIL  = 'info@pgvmesh.org';
+const GITHUB_URL     = 'https://github.com/pgvmesh/www';
 ---
 
 <!doctype html>
@@ -298,13 +299,19 @@ const CONTACT_EMAIL  = 'info@pgvmesh.org';
           <br/>
           <a class="btn btn-secondary" href="https://flasher.meshcore.io/" target="_blank" rel="noopener">flasher.meshcore.io</a>
         </div>
+        <div class="card">
+          <h3>Contribute</h3>
+          <p>This site is open source. Suggest edits, report issues, or send a pull request.</p>
+          <br/>
+          <a class="btn btn-secondary" href={GITHUB_URL} target="_blank" rel="noopener">View on GitHub</a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>PGV Mesh &mdash; community-run MeshCore network &mdash; <a href={DISCORD_URL} target="_blank" rel="noopener">Join Discord</a> &middot; <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+    <p>PGV Mesh &mdash; community-run MeshCore network &mdash; <a href={DISCORD_URL} target="_blank" rel="noopener">Join Discord</a> &middot; <a href={GITHUB_URL} target="_blank" rel="noopener">GitHub</a> &middot; <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
   </footer>
 
   <button class="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">

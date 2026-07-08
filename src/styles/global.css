@@ -199,6 +199,8 @@ section h2 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
@@ -207,6 +209,9 @@ section h2 {
   margin-bottom: 0.75rem;
   color: var(--accent);
 }
+
+/* Pin card buttons to the bottom so they align across varying text lengths */
+.card .btn { margin-top: auto; align-self: flex-start; }
 
 /* Settings table */
 .settings-block {
