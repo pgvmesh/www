@@ -49,6 +49,7 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
       <nav class="site-nav">
         <a href="#start">Get Started</a>
         <a href="#settings">Settings</a>
+        <a href="#channels">Channels</a>
         <a href="#volunteer">Volunteer</a>
         <a href={`mailto:${CONTACT_EMAIL}`}>Contact</a>
       </nav>
@@ -200,6 +201,34 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
 
       <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">
         <strong style="color:var(--text)">Naming.</strong> Keep it <code>pgvmesh.org &lt;area&gt;</code> for every role — the app already shows each node's type by icon, so there's no need to put it in the name. Only add a qualifier to break a tie when one area runs two devices, e.g. <code>pgvmesh.org Grimesland Room</code>.
+      </p>
+    </section>
+
+    <!-- Channels -->
+    <section id="channels">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3fb950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+        Channels
+      </h2>
+      <p style="color:var(--muted); font-size:.95rem; margin-bottom:1rem;">
+        Every companion starts on the shared <strong style="color:var(--text)">Public</strong> channel. To join a topic, add a channel in the MeshCore app whose name starts with <code>#</code> — the app derives the shared key from the name, so anyone using the <em>exact</em> same name lands on the same channel. These are the ones we use across the region:
+      </p>
+
+      <div class="settings-block">
+        <div class="settings-block-title">Public Channels — add any that are useful to you</div>
+        <table>
+          <tbody>
+            <tr><td><code>#ncmesh</code></td><td>General chat for the North Carolina mesh community</td></tr>
+            <tr><td><code>#pgv-area-mesh</code></td><td>Our local PGV Mesh channel for area coordination</td></tr>
+            <tr><td><code>#wx</code></td><td>Weather watches, warnings, and local storm reports</td></tr>
+            <tr><td><code>#test</code></td><td>Range and signal testing — a good place to confirm &ldquo;Heard 1 repeat&rdquo;</td></tr>
+            <tr><td><code>#bot</code></td><td>Automated bot traffic — keep casual chat on the other channels</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.75rem;">
+        Channel names are case-sensitive and generate their own key — type them exactly as shown. Want a new channel? Suggest it on <a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a> so we can keep everyone on the same names.
       </p>
     </section>
 
