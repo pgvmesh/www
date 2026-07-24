@@ -41,7 +41,8 @@ Defined in the frontmatter of `index.astro`:
 ## Content conventions
 
 - Prefer linking to official external docs over writing instructions inline; keep copy concise
-- Page order: Hero → Why a Mesh → Get Started → Settings → Emergency → Observer → Volunteer → Quick Links
+- Page order: Hero → Why a Mesh → Get Started → Settings → Channels → Emergency → Observer → Volunteer → Quick Links
+- Channels are MeshCore hashtag channels (name starts with `#`, key auto-derived from the name); present them preset-style in a table. Current set: `#ncmesh`, `#pgv-area-mesh`, `#wx`, `#test`, `#bot`
 - Settings are split "Everyone" vs "Repeaters Only"; keep them preset-first and minimal
 - Site mission framing: community-built, decentralized network for disaster resilience and off-grid communication, including emergency reporting when cell/internet are down (always with the "not a replacement for 911" disclaimer)
 - Dark theme, green accent (`--accent: #3fb950`); styling lives in global.css with CSS variables
