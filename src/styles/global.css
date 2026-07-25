@@ -114,6 +114,22 @@ button:focus-visible {
 
 .site-nav a:hover { color: var(--text); text-decoration: none; }
 
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.nav-toggle:hover { border-color: var(--accent); }
+
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -199,6 +215,11 @@ main {
 /* Sections */
 section {
   margin-top: 3rem;
+}
+
+/* Clears the sticky header when jumping to an anchor */
+section[id] {
+  scroll-margin-top: 6rem;
 }
 
 section h2 {
@@ -385,5 +406,29 @@ footer {
 
 @media (max-width: 600px) {
   .cta-row { flex-direction: column; align-items: center; }
-  .site-nav { display: none; }
+
+  .nav-toggle { display: flex; }
+
+  /* Absolute so opening the menu doesn't grow the sticky header */
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 1.5rem 1rem;
+  }
+
+  .site-nav.open { display: flex; }
+
+  .site-nav a {
+    padding: 0.6rem 0;
+    font-size: 1rem;
+  }
+
+  .site-nav a + a { border-top: 1px solid var(--border); }
 }

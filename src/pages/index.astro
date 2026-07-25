@@ -48,7 +48,10 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
         <circle cx="392" cy="356" r="38" fill="#3fb950"/>
       </svg>
       <span class="site-title"><span>PGV</span> Mesh</span>
-      <nav class="site-nav">
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav">
         <a href="#start">Get Started</a>
         <a href="#settings">Settings</a>
         <a href="#channels">Channels</a>
@@ -296,15 +299,15 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
       </p>
       <div class="card-grid">
         <div class="card">
-          <h3>🛰️ Host or Donate a Repeater</h3>
+          <h3><span aria-hidden="true">🛰️</span> Host or Donate a Repeater</h3>
           <p>A solar-powered repeater costs $30–60 in parts and runs on its own: no wiring, no internet. Build one, fund one, or host one; we'll handle setup.</p>
         </div>
         <div class="card">
-          <h3>🏔️ Offer a Tall Structure</h3>
+          <h3><span aria-hidden="true">🏔️</span> Offer a Tall Structure</h3>
           <p>Rooftop, barn, silo, water tower, hilltop, or mast? One well-placed elevated node can cover what would take a dozen ground-level repeaters.</p>
         </div>
         <div class="card">
-          <h3>📡 No Interference, No Hassle</h3>
+          <h3><span aria-hidden="true">📡</span> No Interference, No Hassle</h3>
           <p>LoRa uses the license-free 902–928&nbsp;MHz ISM band (FCC Part 15): the same as garage door openers and baby monitors. Brief, low-power transmissions don't interfere with WiFi, cellular, ham, or aviation, and a node draws less power than a nightlight.</p>
         </div>
       </div>
@@ -371,6 +374,22 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
     btn.addEventListener('click', () => {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    const setNav = (open) => {
+      siteNav.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    };
+    navToggle.addEventListener('click', () => setNav(!siteNav.classList.contains('open')));
+    siteNav.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') setNav(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || !siteNav.classList.contains('open')) return;
+      setNav(false);
+      navToggle.focus();
     });
   </script>
 

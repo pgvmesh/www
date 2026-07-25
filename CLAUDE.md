@@ -4,15 +4,15 @@ Static one-page site for PGV Mesh, a community MeshCore LoRa mesh network. Live 
 
 ## Stack
 
-- **Astro** (static output, no SSR adapter) — the whole site is [src/pages/index.astro](src/pages/index.astro) plus [src/styles/global.css](src/styles/global.css)
+- **Astro** (static output, no SSR adapter); the whole site is [src/pages/index.astro](src/pages/index.astro) plus [src/styles/global.css](src/styles/global.css)
 - **Wrangler** deploys the built `dist/` to **Cloudflare Pages** (project name `pgv-mesh`)
 
 ## Commands
 
-- `npm run dev` — Astro dev server
-- `npm run build` — build to `dist/`
-- `npm run deploy` — build + `wrangler pages deploy dist`
-- `npx wrangler dev` — local Cloudflare preview; uses `[build]` in wrangler.toml to rebuild on `src/` changes. Add `--tunnel` for a shareable `*.trycloudflare.com` URL (press `t` to toggle).
+- `npm run dev`: Astro dev server
+- `npm run build`: build to `dist/`
+- `npm run deploy`: build + `wrangler pages deploy dist`
+- `npx wrangler dev`: local Cloudflare preview; uses `[build]` in wrangler.toml to rebuild on `src/` changes. Add `--tunnel` for a shareable `*.trycloudflare.com` URL (press `t` to toggle).
 
 ## Site constants
 
@@ -32,8 +32,8 @@ The settings tables in `index.astro` are authoritative for the exact values. Wha
 
 ## External resources (use these, not alternatives)
 
-- Official MeshCore site: **meshcore.io** — do NOT link meshcore.co.uk (unofficial) or the old ripplebiz GitHub (project moved to meshcore-dev)
-- Flashing: **flasher.meshcore.io** (browser-based) — never instruct manual GitHub downloads
+- Official MeshCore site: **meshcore.io**; do NOT link meshcore.co.uk (unofficial) or the old ripplebiz GitHub (project moved to meshcore-dev)
+- Flashing: **flasher.meshcore.io** (browser-based); never instruct manual GitHub downloads
 - Observer setup: link to the MeshMapper wiki rather than writing our own instructions (the live link is in the Observer section of `index.astro`)
 
 ## Content conventions
@@ -43,4 +43,4 @@ The settings tables in `index.astro` are authoritative for the exact values. Wha
 - Keep the settings tables preset-first and minimal, split by node role
 - Site mission framing: community-built, decentralized network for disaster resilience and off-grid communication, including emergency reporting when cell/internet are down (always with the "not a replacement for 911" disclaimer)
 - Dark theme with a green accent; styling lives in global.css with CSS variables
-- austinmesh.org (CC-BY-SA) is a good reference for onboarding patterns (preset-first settings, "be patient — contacts appear only after they advert", "Heard X repeats" verification)
+- austinmesh.org (CC-BY-SA) is a good reference for onboarding patterns (preset-first settings, "be patient: contacts appear only after they advert", "Heard X repeats" verification)

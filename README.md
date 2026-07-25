@@ -27,8 +27,8 @@ npm run dev        # http://localhost:4321
 
 Other scripts:
 
-- `npm run build` — production build
-- `npm run preview` — serve the built site locally
+- `npm run build`: production build
+- `npm run preview`: serve the built site locally
 
 ## Contributing
 
