@@ -127,11 +127,33 @@ const channels = [
         There's no central tower or server to fail. Every repeater was placed by a volunteer, several run on solar power, and the mesh is already in daily use for ordinary chat, not something dusted off only in a storm.
       </p>
       <div class="hop-diagram">
-        <div class="hop"><div class="hop-dot"></div><span>your radio</span></div>
+        <div class="hop">
+          <svg class="hop-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="10" y="12" width="12" height="16"/>
+            <line x1="13" y1="16.5" x2="19" y2="16.5"/>
+            <line x1="19.5" y1="12" x2="23" y2="5"/>
+          </svg>
+          <span>your radio</span>
+        </div>
         <div class="hop-line"></div>
-        <div class="hop"><div class="hop-dot"></div><span>a repeater</span></div>
+        <div class="hop">
+          <svg class="hop-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M11 29 L16 13 L21 29"/>
+            <line x1="12.7" y1="23.5" x2="19.3" y2="23.5"/>
+            <path d="M11.5 10.5 a6.4 6.4 0 0 1 9 0"/>
+            <path d="M8.5 7 a10.6 10.6 0 0 1 15 0"/>
+          </svg>
+          <span>a repeater</span>
+        </div>
         <div class="hop-line"></div>
-        <div class="hop"><div class="hop-dot"></div><span>a neighbor</span></div>
+        <div class="hop">
+          <svg class="hop-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M7 16 L16 9 L25 16"/>
+            <path d="M10 14.5 L10 26 L22 26 L22 14.5"/>
+            <rect x="14" y="19.5" width="4" height="6.5"/>
+          </svg>
+          <span>a neighbor</span>
+        </div>
       </div>
     </div>
   </section>

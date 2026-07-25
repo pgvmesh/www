@@ -6,14 +6,17 @@
   --rule: #4a4a4a;
   --band: #3c3c3c;
   --accent: #9fd63a;
-  --clay: #4a6318;
-  --on-clay: #f5f5f0;
+  --on-accent: #333333;
 
-  /* Inverted band (volunteer CTA) */
-  --dark: #f0f0f0;
-  --on-dark: #333333;
-  --on-dark-soft: #5a5a5a;
-  --accent-on-dark: #6f8f1f;
+  /* The inverted band is the one place lime can't go: it would sit at 1.5:1
+     on a near-white background. Deep green covers both roles there. */
+  --accent-deep: #4a6318;
+  --on-accent-deep: #f5f5f0;
+
+  /* Inverted band (volunteer CTA): light block on the dark page */
+  --invert-bg: #f0f0f0;
+  --invert-ink: #333333;
+  --invert-ink-soft: #5a5a5a;
 
   --serif: 'Source Serif 4', Georgia, serif;
   --sans: 'IBM Plex Sans', system-ui, sans-serif;
@@ -90,7 +93,7 @@ img { display: block; max-width: 100%; }
   transition: opacity .15s;
 }
 .btn:hover { opacity: .82; }
-.btn-fill { background: var(--clay); color: var(--on-clay); }
+.btn-fill { background: var(--accent); color: var(--on-accent); }
 .btn-ghost { border: 1px solid var(--ink); }
 
 /* Photos ------------------------------------------------------------- */
@@ -243,11 +246,15 @@ img { display: block; max-width: 100%; }
   flex-shrink: 0;
 }
 
-.hop-dot {
+.hop-icon {
   width: 34px;
   height: 34px;
-  border-radius: 50%;
-  border: 2px solid var(--ink);
+  color: var(--ink);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .hop span { font-size: 12px; color: var(--ink-soft); }
@@ -547,8 +554,8 @@ img { display: block; max-width: 100%; }
 
 /* Volunteer ---------------------------------------------------------- */
 .volunteer {
-  background: var(--dark);
-  color: var(--on-dark);
+  background: var(--invert-bg);
+  color: var(--invert-ink);
   padding: 56px var(--pad);
   display: grid;
   grid-template-columns: minmax(280px, 1fr) minmax(220px, 320px);
@@ -556,7 +563,12 @@ img { display: block; max-width: 100%; }
   align-items: center;
 }
 
-.volunteer .eyebrow { color: var(--accent-on-dark); }
+.volunteer .eyebrow { color: var(--accent-deep); }
+
+.volunteer .btn-fill {
+  background: var(--accent-deep);
+  color: var(--on-accent-deep);
+}
 
 .volunteer h2 {
   font-family: var(--serif);
@@ -567,13 +579,13 @@ img { display: block; max-width: 100%; }
 
 .volunteer p {
   font-size: 15px;
-  color: var(--on-dark-soft);
+  color: var(--invert-ink-soft);
   max-width: 56ch;
   margin-bottom: 20px;
 }
 
 .volunteer-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.volunteer .btn-ghost { border-color: var(--on-dark); color: var(--on-dark); }
+.volunteer .btn-ghost { border-color: var(--invert-ink); color: var(--invert-ink); }
 .volunteer-photo { aspect-ratio: 3 / 2; }
 
 /* Footer ------------------------------------------------------------- */
