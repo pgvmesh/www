@@ -31,6 +31,7 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .hop-line::after { animation: none; }
 }
 
 body {
@@ -260,10 +261,37 @@ img { display: block; max-width: 100%; }
 .hop span { font-size: 12px; color: var(--ink-soft); }
 
 .hop-line {
+  position: relative;
   flex: 1;
   height: 1px;
   background: var(--ink);
   margin-bottom: 26px;
+}
+
+/* Relaying is the whole product, so the diagram performs a hop rather than
+   describing one. The second line runs a cycle behind the first, which is
+   what makes it read as one packet being passed along. */
+.hop-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  background: var(--accent);
+  opacity: 0;
+  animation: hop-relay 4s linear infinite;
+}
+
+.hop-line ~ .hop-line::after { animation-delay: 1.2s; }
+
+@keyframes hop-relay {
+  0%   { left: 0;    opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { left: 100%; opacity: 0; }
+  100% { left: 100%; opacity: 0; }
 }
 
 /* Get started -------------------------------------------------------- */
