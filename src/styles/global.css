@@ -37,6 +37,22 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  z-index: 200;
+  padding: 0.6rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.skip-link:focus { top: 0.5rem; }
+
 /* Hero map background */
 .hero-map {
   position: absolute;
@@ -253,6 +269,7 @@ section h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-align: left;
   color: var(--muted);
   border-bottom: 1px solid var(--border);
 }
@@ -262,16 +279,25 @@ table {
   border-collapse: collapse;
 }
 
+th,
 td {
   padding: 0.6rem 1.25rem;
   font-size: 0.92rem;
   border-bottom: 1px solid var(--border);
 }
 
+th {
+  text-align: left;
+  font-weight: 400;
+  color: var(--text);
+}
+
 td:last-child { color: var(--muted); }
 
+tr:last-child th,
 tr:last-child td { border-bottom: none; }
 
+th code,
 td code {
   background: #1c2128;
   padding: 0.15em 0.4em;

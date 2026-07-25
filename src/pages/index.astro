@@ -32,6 +32,8 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="inner">
       <svg class="logo-icon" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +86,7 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
     </div>
   </section>
 
-  <main>
+  <main id="main" tabindex="-1">
 
     <!-- Why a mesh -->
     <section id="why">
@@ -153,44 +155,44 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
       </h2>
 
       <div class="settings-block">
-        <div class="settings-block-title">Companion: your phone-connected node</div>
         <table>
+          <caption class="settings-block-title">Companion: your phone-connected node</caption>
           <tbody>
-            <tr><td>Preset</td><td><code>USA/Canada (Recommended)</code>: sets 910.525&nbsp;MHz, 62.5&nbsp;kHz, SF7 for you</td></tr>
-            <tr><td>Coding Rate</td><td><code>8</code></td></tr>
-            <tr><td>Node Name</td><td>Your choice: whatever you'd like to go by on the network</td></tr>
-            <tr><td>Path Hash</td><td><code>3-byte</code></td></tr>
+            <tr><th scope="row">Preset</th><td><code>USA/Canada (Recommended)</code> sets 910.525&nbsp;MHz, 62.5&nbsp;kHz, SF7 for you</td></tr>
+            <tr><th scope="row">Coding Rate</th><td><code>8</code></td></tr>
+            <tr><th scope="row">Node Name</th><td>Your choice: whatever you'd like to go by on the network</td></tr>
+            <tr><th scope="row">Path Hash</th><td><code>3-byte</code></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="settings-block">
-        <div class="settings-block-title">Repeater: a fixed node that extends coverage</div>
         <table>
+          <caption class="settings-block-title">Repeater: a fixed node that extends coverage</caption>
           <tbody>
-            <tr><td>Preset</td><td><code>USA/Canada (Recommended)</code>: sets 910.525&nbsp;MHz, 62.5&nbsp;kHz, SF7 for you</td></tr>
-            <tr><td>Coding Rate</td><td><code>8</code></td></tr>
-            <tr><td>Node Name</td><td><code>pgvmesh.org &lt;area&gt;</code>: e.g. <code>pgvmesh.org Grimesland</code> or <code>pgvmesh.org NC-43</code></td></tr>
-            <tr><td>Path Hash</td><td><code>3-byte</code></td></tr>
-            <tr><td>Zero-Hop Advert</td><td><code>every 60 min</code></td></tr>
-            <tr><td>Flood Advert</td><td><code>every 3 hours</code></td></tr>
-            <tr><td>Console commands</td><td><code>set txdelay 0.3</code> &middot; <code>set direct.txdelay 0.1</code> &middot; <code>set agc.reset.interval 4</code> &middot; <code>set multi.acks 1</code> &middot; <code>set rxdelay 3</code></td></tr>
+            <tr><th scope="row">Preset</th><td><code>USA/Canada (Recommended)</code> sets 910.525&nbsp;MHz, 62.5&nbsp;kHz, SF7 for you</td></tr>
+            <tr><th scope="row">Coding Rate</th><td><code>8</code></td></tr>
+            <tr><th scope="row">Node Name</th><td><code>pgvmesh.org &lt;area&gt;</code> e.g. <code>pgvmesh.org Grimesland</code> or <code>pgvmesh.org NC-43</code></td></tr>
+            <tr><th scope="row">Path Hash</th><td><code>3-byte</code></td></tr>
+            <tr><th scope="row">Zero-Hop Advert</th><td><code>every 60 min</code></td></tr>
+            <tr><th scope="row">Flood Advert</th><td><code>every 3 hours</code></td></tr>
+            <tr><th scope="row">Console commands</th><td><code>set txdelay 0.3</code> &middot; <code>set direct.txdelay 0.1</code> &middot; <code>set agc.reset.interval 4</code> &middot; <code>set multi.acks 1</code> &middot; <code>set rxdelay 3</code></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="settings-block">
-        <div class="settings-block-title">Room Server: hosts a shared, store-and-forward room</div>
         <table>
+          <caption class="settings-block-title">Room Server: hosts a shared, store-and-forward room</caption>
           <tbody>
-            <tr><td>Preset</td><td><code>USA/Canada (Recommended)</code>: sets 910.525&nbsp;MHz, 62.5&nbsp;kHz, SF7 for you</td></tr>
-            <tr><td>Coding Rate</td><td><code>8</code></td></tr>
-            <tr><td>Node Name</td><td><code>pgvmesh.org &lt;area&gt;</code>: same convention as a repeater</td></tr>
-            <tr><td>Path Hash</td><td><code>3-byte</code></td></tr>
-            <tr><td>Zero-Hop Advert</td><td><code>every 60 min</code></td></tr>
-            <tr><td>Flood Advert</td><td><code>every 3 hours</code> - so members can discover the room</td></tr>
-            <tr><td>Room commands</td><td><code>password &lt;admin&gt;</code> &middot; <code>set guest.password &lt;room-pw&gt;</code> &middot; <code>set allow.read.only on</code> <span style="color:var(--muted)">(optional)</span></td></tr>
-            <tr><td>Not a repeater</td><td>Leave <code>repeat</code> <strong>off</strong>; <a href="https://docs.meshcore.io/" target="_blank" rel="noopener">MeshCore</a> recommends a separate repeater device. No relay tuning needed.</td></tr>
+            <tr><th scope="row">Preset</th><td><code>USA/Canada (Recommended)</code> sets 910.525&nbsp;MHz, 62.5&nbsp;kHz, SF7 for you</td></tr>
+            <tr><th scope="row">Coding Rate</th><td><code>8</code></td></tr>
+            <tr><th scope="row">Node Name</th><td><code>pgvmesh.org &lt;area&gt;</code> (same convention as a repeater)</td></tr>
+            <tr><th scope="row">Path Hash</th><td><code>3-byte</code></td></tr>
+            <tr><th scope="row">Zero-Hop Advert</th><td><code>every 60 min</code></td></tr>
+            <tr><th scope="row">Flood Advert</th><td><code>every 3 hours</code> (so members can discover the room)</td></tr>
+            <tr><th scope="row">Room commands</th><td><code>password &lt;admin&gt;</code> &middot; <code>set guest.password &lt;room-pw&gt;</code> &middot; <code>set allow.read.only on</code> <span style="color:var(--muted)">(optional)</span></td></tr>
+            <tr><th scope="row">Not a repeater</th><td>Leave <code>repeat</code> <strong>off</strong>; <a href="https://docs.meshcore.io/" target="_blank" rel="noopener">MeshCore</a> recommends a separate repeater device. No relay tuning needed.</td></tr>
           </tbody>
         </table>
       </div>
@@ -215,14 +217,14 @@ const GITHUB_URL     = 'https://github.com/pgvmesh/www';
       </p>
 
       <div class="settings-block">
-        <div class="settings-block-title">Public Channels: add any that are useful to you</div>
         <table>
+          <caption class="settings-block-title">Public Channels: add any that are useful to you</caption>
           <tbody>
-            <tr><td><code>#ncmesh</code></td><td>General chat for the North Carolina mesh community</td></tr>
-            <tr><td><code>#pgv-area-mesh</code></td><td>Our local PGV Mesh channel for area coordination</td></tr>
-            <tr><td><code>#wx</code></td><td>Weather watches, warnings, and local storm reports</td></tr>
-            <tr><td><code>#test</code></td><td>Range and signal testing: a good place to confirm &ldquo;Heard 1 repeat&rdquo;</td></tr>
-            <tr><td><code>#bot</code></td><td>Automated bot traffic: keep casual chat on the other channels</td></tr>
+            <tr><th scope="row"><code>#ncmesh</code></th><td>General chat for the North Carolina mesh community</td></tr>
+            <tr><th scope="row"><code>#pgv-area-mesh</code></th><td>Our local PGV Mesh channel for area coordination</td></tr>
+            <tr><th scope="row"><code>#wx</code></th><td>Weather watches, warnings, and local storm reports</td></tr>
+            <tr><th scope="row"><code>#test</code></th><td>Range and signal testing: a good place to confirm &ldquo;Heard 1 repeat&rdquo;</td></tr>
+            <tr><th scope="row"><code>#bot</code></th><td>Automated bot traffic: keep casual chat on the other channels</td></tr>
           </tbody>
         </table>
       </div>
