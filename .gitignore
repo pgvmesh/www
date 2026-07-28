@@ -51,4 +51,5 @@ docs/*
 .impeccable/config.local.json
 .impeccable/live/state.json
 .impeccable/screenshots/
+.impeccable/critique/
 # impeccable-ignore-end
