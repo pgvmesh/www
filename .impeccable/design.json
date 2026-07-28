@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-28T17:53:16Z",
+  "title": "Design System: PGV Mesh",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Beacon Lime", "canonical": "#9fd63a", "tonalRamp": ["#1f2a0c", "#2e3d12", "#3d5019", "#4a6318", "#6b8f22", "#9fd63a", "#c3e879", "#e6f7c2"] },
+      "accent-deep": { "role": "primary-deep", "displayName": "Deep Moss", "canonical": "#4a6318", "tonalRamp": ["#0f140a", "#1c2510", "#2a3717", "#374a1d", "#4a6318", "#6a8a2d", "#94b45c", "#c4d99a"] },
+      "bg": { "role": "neutral", "displayName": "Radio Charcoal", "canonical": "#333333", "tonalRamp": ["#0d0d0d", "#1a1a1a", "#262626", "#333333", "#4d4d4d", "#666666", "#999999", "#cccccc"] },
+      "band": { "role": "neutral", "displayName": "Panel Charcoal", "canonical": "#3c3c3c", "tonalRamp": ["#0f0f0f", "#1e1e1e", "#2d2d2d", "#3c3c3c", "#565656", "#707070", "#a3a3a3", "#d6d6d6"] },
+      "rule": { "role": "neutral", "displayName": "Hairline Gray", "canonical": "#4a4a4a", "tonalRamp": ["#131313", "#242424", "#363636", "#4a4a4a", "#666666", "#828282", "#ababab", "#d5d5d5"] },
+      "ink": { "role": "neutral", "displayName": "Signal White", "canonical": "#f0f0f0", "tonalRamp": ["#333333", "#4d4d4d", "#666666", "#808080", "#a6a6a6", "#cccccc", "#e6e6e6", "#f0f0f0"] },
+      "ink-soft": { "role": "neutral", "displayName": "Soft Static Gray", "canonical": "#c8c8c8", "tonalRamp": ["#2e2e2e", "#454545", "#5c5c5c", "#737373", "#8f8f8f", "#a8a8a8", "#c8c8c8", "#e0e0e0"] },
+      "ink-faint": { "role": "neutral", "displayName": "Faint Static Gray", "canonical": "#a0a0a0", "tonalRamp": ["#262626", "#3a3a3a", "#4f4f4f", "#636363", "#787878", "#8c8c8c", "#a0a0a0", "#c0c0c0"] },
+      "invert-bg": { "role": "neutral-inverted", "displayName": "Signal White (inverted block)", "canonical": "#f0f0f0", "tonalRamp": ["#333333", "#4d4d4d", "#666666", "#808080", "#a6a6a6", "#cccccc", "#e6e6e6", "#f0f0f0"] },
+      "invert-ink": { "role": "neutral-inverted", "displayName": "Charcoal-on-White", "canonical": "#333333", "tonalRamp": ["#0d0d0d", "#1a1a1a", "#262626", "#333333", "#4d4d4d", "#666666", "#999999", "#cccccc"] },
+      "invert-ink-soft": { "role": "neutral-inverted", "displayName": "Muted Charcoal", "canonical": "#5a5a5a", "tonalRamp": ["#161616", "#242424", "#333333", "#424242", "#5a5a5a", "#767676", "#9a9a9a", "#c6c6c6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero h1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Top-level section headings." },
+      "title": { "displayName": "Title", "purpose": "Secondary section headings." },
+      "body": { "displayName": "Body", "purpose": "Default reading text throughout the page." },
+      "label": { "displayName": "Label", "purpose": "Mono eyebrows and settings-card headers; technical readout voice." }
+    },
+    "shadows": [
+      { "name": "hero-panel-edge", "value": "18px 0 40px -20px rgba(0, 0, 0, .35)", "purpose": "Hero text panel sitting in front of the live map iframe behind it. The one sanctioned shadow in the system; removed on mobile where the panel stacks instead of overlapping." }
+    ],
+    "motion": [
+      { "name": "hop-relay", "value": "hop-relay 4s linear infinite", "purpose": "Packet dot traveling along the how-it-works hop diagram lines, staggered 1.2s between hops. Disabled under prefers-reduced-motion." },
+      { "name": "ease-opacity", "value": "opacity .15s", "purpose": "Default hover transition for links, buttons, and nav items; opacity only, no color or transform shift." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "520px" },
+      { "name": "md", "value": "760px" },
+      { "name": "lg", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled call-to-action button; lime on dark surfaces, deep moss inside the inverted volunteer block.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Get a compatible radio</a>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 12px 22px; font-family: 'Public Sans', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; text-decoration: none; background: #9fd63a; color: #333333; transition: opacity .15s; } .ds-btn-primary:hover { opacity: .82; } .ds-btn-primary:focus-visible { outline: 2px solid #9fd63a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outline secondary button, paired beside the primary button in the hero and volunteer sections.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">View the live map</a>",
+      "css": ".ds-btn-ghost { display: inline-block; padding: 12px 22px; font-family: 'Public Sans', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; text-decoration: none; background: transparent; color: #f0f0f0; border: 1px solid #f0f0f0; transition: opacity .15s; } .ds-btn-ghost:hover { opacity: .82; } .ds-btn-ghost:focus-visible { outline: 2px solid #9fd63a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Settings Card",
+      "kind": "card",
+      "refersTo": "settings-card",
+      "description": "Radio-settings preset card in the technical reference grid; a 3px lime top rule is its only distinguishing edge.",
+      "html": "<div class=\"ds-settings-card\"><h3>Companion Preset</h3><div class=\"ds-role\">For phone-paired nodes</div><p>902–928 MHz, coding rate 8, bandwidth 250 kHz.</p></div>",
+      "css": ".ds-settings-card { background: #333333; color: #f0f0f0; padding: 18px 18px 20px; border-top: 3px solid #9fd63a; font-family: 'Public Sans', system-ui, sans-serif; } .ds-settings-card h3 { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: #9fd63a; margin-bottom: 10px; } .ds-settings-card .ds-role { font-size: 12.5px; color: #a0a0a0; margin-bottom: 12px; } .ds-settings-card p { font-size: 14.5px; color: #c8c8c8; }"
+    },
+    {
+      "name": "Disclosure Row",
+      "kind": "custom",
+      "refersTo": "ref-disclosure",
+      "description": "Technical-reference accordion row: a lime square bullet and a rotating +/× glyph are the only open-state affordances.",
+      "html": "<details class=\"ds-ref\"><summary><span><span class=\"ds-dot\"></span>Channel keys</span><span class=\"ds-chev\">+</span></summary><div class=\"ds-ref-body\">Channel keys are derived from the exact channel name.</div></details>",
+      "css": ".ds-ref { border-top: 1px solid #f0f0f0; padding: 16px 0; } .ds-ref summary { cursor: pointer; font-size: 15.5px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 6px 10px; background: #3c3c3c; color: #f0f0f0; list-style: none; transition: opacity .15s; } .ds-ref summary::-webkit-details-marker { display: none; } .ds-ref summary > span:first-child { display: flex; align-items: center; gap: 12px; } .ds-dot { width: 8px; height: 8px; background: #9fd63a; flex-shrink: 0; display: inline-block; } .ds-chev { color: #9fd63a; font-weight: 400; font-size: 18px; transition: transform .15s; } .ds-ref[open] .ds-chev { transform: rotate(45deg); } .ds-ref-body { margin-top: 14px; font-size: 14.5px; color: #c8c8c8; }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "refersTo": "eyebrow",
+      "description": "Mono, uppercase, lime section label preceding every heading; the page's only all-caps text.",
+      "html": "<span class=\"ds-eyebrow\">How it works</span>",
+      "css": ".ds-eyebrow { display: block; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #9fd63a; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "site-nav",
+      "description": "Inline header nav; links dim on hover, no underline or active-state color change.",
+      "html": "<nav class=\"ds-site-nav\"><a href=\"#\">How it works</a><a href=\"#\">Get started</a><a href=\"#\">Live map</a></nav>",
+      "css": ".ds-site-nav { display: flex; align-items: center; gap: 22px; font-size: 13.5px; font-family: 'Public Sans', system-ui, sans-serif; } .ds-site-nav a { color: #f0f0f0; text-decoration: none; transition: opacity .15s; } .ds-site-nav a:hover { opacity: .6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Net Control Log",
+    "overview": "This is the visual world of a volunteer radio net: the flat, hairline-ruled logbook a net control operator keeps, not a marketing brochure for one. Every section reads like an entry in that log: a mono-set eyebrow labeling what follows, a serif heading stating it plainly, and a body of plain sans text with no persuasion in its voice. The lime accent behaves like a signal indicator, an LED that lights up exactly where something is live or actionable, never as decoration. The layout is full-bleed and edge-to-edge; nothing floats in a centered card. Sections stack and separate with 1px hairline rules the way logbook entries separate with a line, not a gap. The one departure from flatness, the hero panel's soft directional shadow, exists because that panel sits physically in front of the live map behind it: everywhere else, surfaces are flush with the page. This system explicitly rejects rounded, soft, \"friendly app\" styling: no border-radius, no card elevation, no gradients. It also rejects the hobbyist-clutter look of DIY radio sites (dense tables, no hierarchy, default system fonts): the civic type stack and generous section padding keep it legible under stress, on a phone, on a bad connection.",
+    "keyCharacteristics": [
+      "Flat and full-bleed: hairline rules and padding do the work borders and shadows would elsewhere",
+      "Mono-set eyebrows and technical spec tables read like instrument readouts, not labels",
+      "The accent is a signal indicator: sparse, and always attached to something live or actionable",
+      "Serif headlines carry civic, institutional weight against a plain, quiet sans body"
+    ],
+    "rules": [
+      { "name": "The Signal, Not Scenery Rule", "body": "Beacon Lime never fills a background or a large surface. It marks a point: a label, a numeral, a rule, a button, a live indicator. If lime is covering more than a stripe or a button, it's being used wrong.", "section": "colors" },
+      { "name": "The One Eyebrow Rule", "body": "Every section opens with exactly one mono, uppercase, lime eyebrow naming what follows. It is the section's only all-caps text; body copy is always sentence case.", "section": "typography" },
+      { "name": "The Flat-Except-One Rule", "body": "No new shadow tokens. The hero panel's edge shadow is the sole sanctioned exception because it depicts a real front-to-back relationship (panel over map); it is not a decoration to imitate elsewhere.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do treat Beacon Lime as a point indicator (label, rule, numeral, button, live dot), never a fill or background.",
+      "Do separate content with 1px Hairline Gray rules and full-bleed padding instead of bordered or elevated cards.",
+      "Do keep every section's eyebrow the only all-caps text on the page; everything else is sentence case.",
+      "Do keep Martian Mono for anything that reads as a technical readout (spec values, channel tables, eyebrows) and Public Sans for everything a visitor reads at length.",
+      "Do preserve the hero panel's edge shadow as the sole shadow in the system; it depicts a real overlap, not a style choice to spread."
+    ],
+    "donts": [
+      "Don't add border-radius, drop shadows, or gradients anywhere outside the hero panel's existing edge shadow.",
+      "Don't center content in a max-width container; the layout is full-bleed by design.",
+      "Don't substitute Source Serif 4 or IBM Plex for the current civic type stack; the departure from the original handoff fonts is deliberate, not drift.",
+      "Don't fill large surfaces with the accent color, in either its lime or deep-moss form.",
+      "Don't lower Faint Static Gray's contrast; it was raised specifically to clear WCAG AA."
+    ]
+  }
+}
