@@ -181,7 +181,7 @@ const channels = [
           <span class="step-num">3</span>
           <div>
             <strong>Apply our <a class="link" href="#reference">settings</a></strong>
-            <p>Select the USA/Canada preset, pick a node name, and set the 3-byte path hash.</p>
+            <p>Select the USA/Canada preset, pick a node name, set the 3-byte path hash, and use coding rate 8. Full settings for every node role are in the <a class="link" href="#reference">technical reference</a> below.</p>
           </div>
         </div>
         <div class="step">
@@ -228,7 +228,7 @@ const channels = [
   <!-- Outage context -->
   <section class="outage">
     <p>
-      Eastern North Carolina loses cell and internet service most often during hurricane season and after ice storms, when downed lines and flooded roads can keep repair crews out for days. A LoRa mesh doesn't route through that infrastructure at all. Radios keep relaying to each other as long as they have power, which is why several PGV repeaters run on solar.
+      Eastern North Carolina loses cell and internet service most often during hurricane season and after ice storms, when downed lines and flooded roads can keep repair crews out for days. A LoRa mesh doesn't route through that infrastructure at all. Radios keep relaying to each other as long as they have power, which is why several PGV repeaters run on solar. This website and its live map do need an internet connection to load, though: the mesh itself doesn't.
     </p>
   </section>
 
@@ -236,6 +236,18 @@ const channels = [
   <section id="reference" class="reference">
     <span class="eyebrow">Technical reference</span>
     <h2>Settings, channels, emergencies, and observers.</h2>
+
+    <details class="ref">
+      <summary><span>Emergencies without cell or internet</span> <span class="ref-chev">+</span></summary>
+      <div class="ref-body">
+        <p>If cellular and internet are completely down, a MeshCore companion node still sends text messages across the mesh.</p>
+        <p><strong>1. Send a message on the public channel.</strong> State your location, the emergency, and what help you need. Short messages relay further and more reliably.</p>
+        <p><strong>2. The mesh carries it.</strong> Your message hops repeater-to-repeater across the region, even without direct range to anyone.</p>
+        <p><strong>3. Someone bridges to help.</strong> Members with working power or internet relay your report to 911 or family.</p>
+        <p><strong>4. Stay reachable.</strong> Keep your node powered and watch for replies.</p>
+        <p class="fine">The mesh is a community best-effort network, not a replacement for 911. Use an official emergency channel first if one is available to you.</p>
+      </div>
+    </details>
 
     <details class="ref">
       <summary><span>Companion, Repeater &amp; Room Server settings</span> <span class="ref-chev">+</span></summary>
@@ -292,18 +304,6 @@ const channels = [
     </details>
 
     <details class="ref">
-      <summary><span>Emergencies without cell or internet</span> <span class="ref-chev">+</span></summary>
-      <div class="ref-body">
-        <p>If cellular and internet are completely down, a MeshCore companion node still sends text messages across the mesh.</p>
-        <p><strong>1. Send a message on the public channel.</strong> State your location, the emergency, and what help you need. Short messages relay further and more reliably.</p>
-        <p><strong>2. The mesh carries it.</strong> Your message hops repeater-to-repeater across the region, even without direct range to anyone.</p>
-        <p><strong>3. Someone bridges to help.</strong> Members with working power or internet relay your report to 911 or family.</p>
-        <p><strong>4. Stay reachable.</strong> Keep your node powered and watch for replies.</p>
-        <p class="fine">The mesh is a community best-effort network, not a replacement for 911. Use an official emergency channel first if one is available to you.</p>
-      </div>
-    </details>
-
-    <details class="ref">
       <summary><span>Become an observer</span> <span class="ref-chev">+</span></summary>
       <div class="ref-body">
         <p>An observer feeds live mesh traffic to <a class="link" href={MESHMAPPER_URL} target="_blank" rel="noopener">our region map</a> over MQTT. It's a function, not a firmware role: any node can run it, with the same radio settings as everything else. Follow the <a class="link" href="https://wiki.meshmapper.net/mqtt-main/" target="_blank" rel="noopener">MeshMapper observer guide</a>, or ask on <a class="link" href={DISCORD_URL} target="_blank" rel="noopener">Discord</a>.</p>
@@ -345,6 +345,9 @@ const channels = [
   </footer>
 
   <script>
+    const heroMap = document.querySelector('.hero-map');
+    heroMap?.addEventListener('load', () => heroMap.classList.add('is-loaded'));
+
     const shield = document.querySelector('.map-shield');
     shield?.addEventListener('click', () => {
       const frame = shield.previousElementSibling as HTMLIFrameElement | null;
