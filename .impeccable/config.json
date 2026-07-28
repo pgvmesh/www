@@ -1,0 +1,11 @@
+{
+  "detector": {
+    "ignoreRules": [
+      "side-tab",
+      "repeated-section-kickers",
+      "all-caps-body"
+    ],
+    "ignoreFiles": [],
+    "ignoreValues": []
+  }
+}

@@ -32,6 +32,8 @@ The look came from a Claude Design handoff (July 2026): editorial, flat, full-bl
 - The flatness is deliberate. No border-radius, no card surfaces, no shadows beyond the hero panel's edge; sections are separated by hairline rules and full-bleed padding rather than a centered container.
 - The prototype shipped no breakpoints and no accessibility affordances. Both were added afterward: the responsive rules, plus the skip link, `<main>` landmark, focus-visible outlines, reduced-motion handling, and mobile nav toggle. Preserve them when reworking layout.
 - Brand assets (`favicon.svg`, `favicon.ico`, `logo.svg`, `og.png`) are hand-colored to match the accent and are not generated from it. Re-export them if the accent changes.
+- The type stack deliberately departs from the handoff, which specified Source Serif 4 and IBM Plex. The current faces were chosen for their civic provenance; this is not drift to be corrected.
+- `.impeccable/config.json` silences three detector rules because each flags a deliberate choice, not a defect: `side-tab` (the accent rule on the settings cards), `repeated-section-kickers` and `all-caps-body` (the mono eyebrow above every section heading). `line-length` is deliberately left reporting; the full-bleed layout does run long lines and that is a real open question, not a settled decision.
 
 ## Content conventions
 
