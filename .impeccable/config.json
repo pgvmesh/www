@@ -6,6 +6,16 @@
       "all-caps-body"
     ],
     "ignoreFiles": [],
-    "ignoreValues": []
+    "ignoreValues": [
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-08-20T20:10:28.961Z",
+        "reason": "The .hero-map grid is a loading placeholder standing in for the embedded live map iframe, not decorative filler; the rule's own carve-out for map surfaces applies"
+      }
+    ]
   }
 }
