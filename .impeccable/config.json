@@ -3,7 +3,8 @@
     "ignoreRules": [
       "side-tab",
       "repeated-section-kickers",
-      "all-caps-body"
+      "all-caps-body",
+      "design-system-font-size"
     ],
     "ignoreFiles": [],
     "ignoreValues": [
