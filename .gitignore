@@ -45,3 +45,11 @@ yarn-error.log*
 
 # AI stuff
 docs/*
+
+# impeccable-ignore-start
+# Per-developer detector overrides and runtime state; the shared config is committed.
+.impeccable/config.local.json
+.impeccable/live/state.json
+.impeccable/screenshots/
+.impeccable/critique/
+# impeccable-ignore-end

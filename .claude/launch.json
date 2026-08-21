@@ -4,8 +4,8 @@
       {
         "name": "wrangler dev (build watch + live reload)",
         "runtimeExecutable": "npx",
-        "runtimeArgs": ["wrangler", "dev", "--live-reload"],
-        "port": 8787
+        "runtimeArgs": ["wrangler", "dev", "--live-reload", "--port", "8788"],
+        "port": 8788
       }
     ]
 }
